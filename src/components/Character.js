@@ -26,7 +26,7 @@ const Character = (props) => {
     console.log(props);
     const { name } = props.character;
     return (
-        <StyledChar>
+        <StyledChar onClick={() => {console.log(`clicked ${name}`)}}>
             <p>{name}</p>
         </StyledChar>
     )
