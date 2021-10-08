@@ -1,13 +1,13 @@
 // Write your Character component here
 import React from 'react';
-// import Character from './Character';
 
 const Character = (props) => {
     console.log(props);
+    const { name } = props.character;
     return (
-
-        <p>characters go here</p>
-
+        <div className='chardiv'>
+            <p>{name}</p>
+        </div>
     )
 }
 

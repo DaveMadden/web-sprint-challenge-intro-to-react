@@ -8,7 +8,7 @@ const Chars = (props) => {
         <div className="characters-wrapper">
             characters go here
             {props.chars.map(char =>{
-                return <Character character={char} />
+                return <Character character={char} key={`${char.birth_year}${char.height}${char.mass}`} />
             })}
         </div>
 
