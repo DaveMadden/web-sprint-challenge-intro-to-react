@@ -14,6 +14,7 @@ const StyledChars = styled.div`
     color: ${pr => pr.theme.secondaryColor};
     background-blend-mode: multiply;
     opacity: 0.8;
+    
 `
 
 const Chars = (props) => {

@@ -13,9 +13,10 @@ const StyledChar = styled.div`
     background-color: ${pr => pr.theme.primaryColor};
     color: ${pr => pr.theme.secondaryColor};
     margin: 5px auto;
-    &:hover{
+    
+    &:hover {
         transition: all 0.2s ease-in-out;
-        background-color: ${pr => pr.theme.secondaryColor};
+        background-color: gold;
         color: black;
     }
 `
