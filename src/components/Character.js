@@ -1,6 +1,7 @@
 // Write your Character component here
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import MovieList from './MovieList';
 
 const StyledChar = styled.div`
     display:flex;
@@ -23,11 +24,14 @@ const StyledChar = styled.div`
 
 
 const Character = (props) => {
-    console.log(props);
-    const { name } = props.character;
+    const [showDetail, setShowDetail] = useState(false);
+    // console.log(props);
+    const { name, films } = props.character;
+    // console.log(`${name} was in: ${films}`);
     return (
-        <StyledChar onClick={() => {console.log(`clicked ${name}`)}}>
+        <StyledChar onClick={() => {setShowDetail(!showDetail)}}>
             <p>{name}</p>
+            {showDetail && <MovieList films={films}/>}
         </StyledChar>
     )
 }
